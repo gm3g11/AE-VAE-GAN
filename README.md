@@ -1,11 +1,11 @@
 # AE-VAE-GAN
 Try AE,VAE,DCGAM,AEWGAN, VAEDCGAN on brain dataset in Pytorch
 
-1.Dataset Introduction  
+1.Dataset   
 
-2.Structure  
+2.Model
 
-3.results  
+3.Results  
 
 4.Tricks for training  
 a.In the Discriminator or Generater/Decoder, uses sigmoid instead of tanh  
@@ -22,4 +22,7 @@ def frozen_params(module: nn.Module):
 frozen_params(G)
 free_params(D)
 
-c. The network should be designed deliberately. If too shallow, the image is blurred. If too deep the image is almost black and couldn't see the brain.
+c. The network should be designed deliberately. If too shallow, the image is blurred. If too deep the image is almost black and couldn't see the brain.  
+
+4. Summuray  
+VAE_DCGAN could help to denoise and the recovered images are also deblured compared to VAE results.
